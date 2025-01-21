@@ -2,7 +2,7 @@
 
 how to retrive updated value in rabbit mq consumer.
 in adobe commerce getting old store configuration data. use Belellow method to get updated data in consumer file.
-,,,
+```php
  use Magento\Framework\App\Config\ReinitableConfigInterface as ConfigInterface;
  
  /**
@@ -14,7 +14,12 @@ in adobe commerce getting old store configuration data. use Belellow method to g
      private ConfigInterface $config
  ) {
  }
- //Call this in method your 
-  $this->config->reinit();    
 
-,,,
+public function proceed(string $msg)
+{
+ //Call this in method your 
+  $this->config->reinit();
+}
+
+
+```
