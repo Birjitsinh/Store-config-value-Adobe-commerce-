@@ -1,7 +1,17 @@
 # Store-config-value-Adobe-commerce-
 
-how to retrive updated value in rabbit mq consumer.
-in adobe commerce getting old store configuration data. use Belellow method to get updated data in consumer file.
+Retrieve Updated Value in RabbitMQ Consumer for Adobe Commerce
+
+When working with RabbitMQ in Adobe Commerce, you might encounter a scenario where the consumer retrieves outdated store configuration data instead of the updated values. This can be resolved by using the correct method to fetch the updated store configuration in the consumer file.
+
+Problem
+
+By default, store configuration values might be cached, leading to the consumer processing old data. This can cause inconsistencies, especially when the configuration has recently changed.
+
+Solution
+
+To retrieve the updated store configuration data in your RabbitMQ consumer, use the following approach:
+
 ```php
  use Magento\Framework\App\Config\ReinitableConfigInterface as ConfigInterface;
  
